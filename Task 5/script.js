@@ -8,199 +8,195 @@ let shoppingList = [
 ];
 
 // 1. Вывод всего списка на экран таким образом, чтобы сначала шли некупленные продукты, а потом - купленные.
-//let list = '';
-//let listTrue = '';
-//function shop(object) {
-//	for (let i = 0; i < object.length; i++) {
-//		if (object[i].bought !== true) {
-//			list += object[i].title + ' ';			
-//		}
-//	}
-//	for (let i = 0; i < object.length; i++) {
-//		if (object[i].bought == true) {
-//			listTrue += object[i].title + ', ';
-//		}
-//	}
-//}
-//shop(shoppingList);
-//console.log(`Этот товар не куплен - ${list}`);
-//console.log(`Купленный товар - ${listTrue}`);
-
+let list = '';
+let listTrue = '';
+function shop(object) {
+	for (let i = 0; i < object.length; i++) {
+		if (object[i].bought !== true) {
+			list += object[i].title + ' ';			
+		}
+	}
+	for (let i = 0; i < object.length; i++) {
+		if (object[i].bought == true) {
+			listTrue += object[i].title + ', ';
+		}
+	}
+}
+shop(shoppingList);
+console.log(`Этот товар не куплен - ${list}`);
+console.log(`Купленный товар - ${listTrue}`);
 
 // 2. Добавление покупки в список.
-//function addProduct(product) {
-//    let productOfList = shoppingList.find((item) => item.title === product);
-//    if (productOfList) {
-//        productOfList.count++;
-//    } else {
-//        shoppingList.push({ title: product, count: 1, bought: false });
-//    }
-//}
-// addProduct('banana');
-// console.log(shoppingList);
+function addProduct(product) {
+    let productOfList = shoppingList.find((item) => item.title === product);
+    if (productOfList) {
+        productOfList.count++;
+    } else {
+        shoppingList.push({ title: product, count: 1, bought: false });
+    }
+}
+ addProduct('banana');
+ console.log(shoppingList);
 
 // 3. Покупка продукта. Функция принимает название продукта и отмечает его как купленный.
-//function markProduct(product) {
-//    shoppingList.forEach((element) => {
-//        if (element.title === product) {
-//            element.bought = true;
-//        }
-//    });
-//}
-//markProduct('milk');
-//console.log(shoppingList);
+function markProduct(product) {
+    shoppingList.forEach((element) => {
+        if (element.title === product) {
+            element.bought = true;
+        }
+    });
+}
+markProduct('milk');
+console.log(shoppingList);
 
 
 // Задание 1. В массиве, состоящем из n элементов, вычислить:
 // 1.1 Номер минимального элемента массива.
 
-//let element = [17, 46, 8, 34, 5];
-//let minElement = element[0];
+let element = [17, 46, 8, 34, 5];
+let minElement = element[0];
 
-//element.forEach(item => {
-//	if (item < minElement) {
-//		minElement = item
-//	}	
-//});
+element.forEach(item => {
+	if (item < minElement) {
+		minElement = item
+	}	
+});
 
-//let minIndex = element.findIndex(a => a === minElement);
+let minIndex = element.findIndex(a => a === minElement);
 
-//console.log(minIndex, minElement);
+console.log(minIndex, minElement);
 
 // 1.2 Сумму модулей элементов массива, расположенных после первого
 // отрицательного элемента.
 
-//let elementTwo = [17, 46, -8, 34, 5];
-//let negElement = 0;
-//let a;
-//for (let i = 0; i < elementTwo.length; i++) {
-//	if (a) {
-//		negElement += Math.abs(elementTwo[i]);
-//	}
-//	if (elementTwo[i] < 0) {
-//		a = true;
-//	}
-//};
+let elementTwo = [17, 46, -8, 34, 5];
+let negElement = 0;
+let a;
+for (let i = 0; i < elementTwo.length; i++) {
+	if (a) {
+		negElement += Math.abs(elementTwo[i]);
+	}
+	if (elementTwo[i] < 0) {
+		a = true;
+	}
+};
 
-//console.log(negElement);
+console.log(negElement);
 
 
 // Задание 2. В массиве, состоящем из n элементов, вычислить:
 // 1.1 номер максимального элемента массива;
-//let element = [17, 46, 8, 34, 5];
-//let maxElement = element[0];
+let element = [17, 46, 8, 34, 5];
+let maxElement = element[0];
 
-//element.forEach(item => {
-//	if (item > maxElement) {
-//		maxElement = item
-//	}	
-//});
+element.forEach(item => {
+	if (item > maxElement) {
+		maxElement = item
+	}	
+});
 
-//let minIndex = element.findIndex(a => a === maxElement);
-//console.log(minIndex, maxElement);
+let minIndex = element.findIndex(a => a === maxElement);
+console.log(minIndex, maxElement);
 
 // 1.2 Сумму элементов массива, расположенных после первого отрицательногоы элемента.
 
-//let element = [17, 46, -8, 34, -5];
-//let minIndex = element.findIndex(a => a < 0);
+let element = [17, 46, -8, 34, -5];
+let minIndex = element.findIndex(a => a < 0);
 
-//let sum = element.reduce(function(previousValue, currentValue, index, array) {
-//	if (index > minIndex) {
-//	return previousValue + Math.abs(currentValue);
-//	} 
-//	return previousValue;
-//}, 0);
+let sum = element.reduce(function(previousValue, currentValue, index, array) {
+	if (index > minIndex) {
+	return previousValue + Math.abs(currentValue);
+	} 
+	return previousValue;
+}, 0);
 
-//console.log(sum);
+console.log(sum);
 
 
 // Задание 3. В массиве, состоящем из n элементов, вычислить:
 // 1.1 количество элементов массива, лежащих в диапазоне от А до В; 
 
-// previousValue = 0 
-// item - элемент массива(не индекс)
+let element = [18, 520, 8, 68, 6, 177];
+let a = element.reduce(function(previousValue, item) {
+	if (item > 5 && item < 150) {
+		return previousValue + 1;
+	}
+	return previousValue;
+}, 0);
 
-//let element = [18, 520, 8, 68, 6, 177];
-//let a = element.reduce(function(previousValue, item) {
-//	if (item > 5 && item < 150) {
-//		return previousValue + 1;
-//	}
-//	return previousValue;
-//}, 0);
-
-//console.log(a);
+console.log(a);
  
 // 1.2 сумму элементов массива, расположенных после максимального элемента.
 
-//let element = [18, 520, 8, 68, 6, 177];
-//let b = element[0];
+let element = [18, 520, 8, 68, 6, 177];
+let b = element[0];
 	
-//element.forEach(item  => {
-//	if (item > b) {
-//		b = item;
-//	}
-//});
+element.forEach(item  => {
+	if (item > b) {
+		b = item;
+	}
+});
 
-//let c = element.findIndex(item => {
-//	return item === b;
-//})
+let c = element.findIndex(item => {
+	return item === b;
+})
 
-//let d = element.reduce(function (previousValue, item, index) {
-//	if (index  > c) {
-//		return previousValue + item;
-//	}
-//	return previousValue;
-//}, 0)
+let d = element.reduce(function (previousValue, item, index) {
+	if (index  > c) {
+		return previousValue + item;
+	}
+	return previousValue;
+}, 0)
 
-//console.log(d);
+console.log(d);
 
 
 // Задание 4. В массиве, состоящем из n элементов, вычислить:
 // 1.1 количество элементов массива, равных 0;
 
-//let element = [17, 0, 23, 34, 5, 51];
-//function countZero(arr) {
-//    let count = 0;
-//    arr.forEach((item) => {
-//        if (item === 0) {
-//            count++;
-//        }
-//    });
-//    return count;
-//}
+let element = [17, 0, 23, 34, 5, 51];
+function countZero(arr) {
+    let count = 0;
+    arr.forEach((item) => {
+        if (item === 0) {
+            count++;
+        }
+    });
+    return count;
+}
 
-// console.log(countZero(element));
+ console.log(countZero(element));
 
 // 1.2 сумму элементов массива, расположенных после минимального элемента.
 
-//let arr = [17, 0, 23, 34, 5, 51];
-//let minIndex = arr.findIndex(a => a <= 0);
+let arr = [17, 0, 23, 34, 5, 51];
+let minIndex = arr.findIndex(a => a <= 0);
 
-//let sum = arr.reduce(function(previousValue, currentValue, index, array) {
-//	if (index > minIndex) {
-//	return previousValue + Math.abs(currentValue);
-//	} 
-//	return previousValue;
-//}, 0);
+let sum = arr.reduce(function(previousValue, currentValue, index, array) {
+	if (index > minIndex) {
+	return previousValue + Math.abs(currentValue);
+	} 
+	return previousValue;
+}, 0);
 
-//console.log(sum);
+console.log(sum);
 
 
 // Задание 5. В массиве, состоящем из n элементов, вычислить:
 // 1. количество элементов массива, больших С;
-//let array = [17, 0, 23, 34, 5, 51];
+let array = [17, 0, 23, 34, 5, 51];
 
-//function countElem(arr) {
-//	let c = 15; 
-//	let count = arr.forEach((acc, item) => {
-//		if (item > c) {
-//			return (acc += 1); 
-//		}
-//		return acc;
-//	}, 0);
-//	console.log(count);
-//}
-//countElem(array);
+function countElem(arr) {
+	let c = 15; 
+	let count = arr.forEach((acc, item) => {
+		if (item > c) {
+			return (acc += 1); 
+		}
+		return acc;
+	}, 0);
+	console.log(count);
+}
+countElem(array);
 
 
 
@@ -318,24 +314,24 @@ console.log(student);
 
 
 // Задание 1. С картинки: 
-//let array = [1, 6, 83, 52, 8, 32, 9, -66];
+let array = [1, 6, 83, 52, 8, 32, 9, -66];
 
-//let a = 5;
-//let b = 2;
-//let c = 0;
+let a = 5;
+let b = 2;
+let c = 0;
 
-//function getValue(arr) {
-//	arr.forEach(x => {
-//		if ((x < 0 ) && b !== 0) {
-//			console.log(`${a * Math.pow(x, 2) + b}`);
-//		}
-//		else if ((x < 0) && (b === 0)) {
-//			console.log(`${(x - a) / (x - c)}`);
-//		}
-//		else {
-//			console.log(`${x / c}`);
-//		}
-//	});
-//}
+function getValue(arr) {
+	arr.forEach(x => {
+		if ((x < 0 ) && b !== 0) {
+			console.log(`${a * Math.pow(x, 2) + b}`);
+		}
+		else if ((x < 0) && (b === 0)) {
+			console.log(`${(x - a) / (x - c)}`);
+		}
+		else {
+			console.log(`${x / c}`);
+		}
+	});
+}
 
-//getValue(array);
+getValue(array);
