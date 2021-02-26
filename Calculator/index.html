@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style/reset.css">
+	<link rel="stylesheet" href="./style/style.css">
+	<title>Document</title>
+</head>
+<body>
+<div class="calculator">
+    <form class="calculator__form">
+        <div class="calculator__row">
+			<input class="calculator__display" name="textView" id="display" type="text" readonly/>
+        </div>
+        <div class="calculator__row">
+            <button type="button" class="calculator__key calculator__clear">С</button>
+            <button type="button" class="calculator__key calculator__backspace">CE</button>
+            <button type="button" onclick="insert('+')" id="plus" value="+" class="calculator__key calculator__button">+</button>
+        </div>
+        <div class="calculator__row">
+            <button type="button" onclick="insert('9')" class="calculator__key calculator__button">9</button>
+            <button type="button" onclick="insert('8')" class="calculator__key calculator__button">8</button>
+            <button type="button" onclick="insert('7')" class="calculator__key calculator__button">7</button>
+            <button type="button" onclick="insert('-')" class="calculator__key calculator__button">-</button>
+        </div>
+        <div class="calculator__row">
+            <button type="button" onclick="insert('6')" class="calculator__key calculator__button">6</button>
+            <button type="button" onclick="insert('5')" class="calculator__key calculator__button">5</button>
+            <button type="button" onclick="insert('4')" class="calculator__key calculator__button">4</button>
+            <button type="button" onclick="insert('*')" class="calculator__key calculator__button">&times;</button>
+        </div>
+        <div class="calculator__row">
+            <button type="button" onclick="insert('3')" class="calculator__key calculator__button">3</button>
+            <button type="button" onclick="insert('2')" class="calculator__key calculator__button">2</button>
+            <button type="button" onclick="insert('1')" class="calculator__key calculator__button">1</button>
+            <button type="button" onclick="insert('/')" class="calculator__key calculator__button">&divide;</button>
+        </div>
+        <div class="calculator__row">
+            <button type="button" onclick="insert('0')" class="calculator__key calculator__button">0</button>
+            <button type="button" onclick="insert('.')" class="calculator__key calculator__button">.</button>
+            <button type="button" class="calculator__key calculator__key--equal">=</button>
+        </div>
+    </form>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>
