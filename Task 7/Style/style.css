@@ -1,0 +1,32 @@
+body {
+	padding: 20px;
+}
+p {
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+	padding-top: 20px;
+}
+
+.button_style {
+	display: flex;
+	justify-content: space-around;
+	padding: 20px;
+}
+
+button.new {
+    background: -moz-linear-gradient(#00BBD6, #EBFFFF);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#00BBD6), to(#EBFFFF));
+	padding: 3px 30px;
+	color: #333;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #666;
+}
+
+.task3 {
+	display: flex;
+	justify-content: center;
+	padding-top: 25px;
+}
