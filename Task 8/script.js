@@ -1,7 +1,5 @@
 // - Массив с числами:
 let array = [1, 4, 23, 7, 55, 0, -37, 0, 9, 15];
-console.log(array);
-
 
 // ======================== 1) Найдите сумму элементов массива:
 function sum(arr) {
@@ -109,14 +107,14 @@ sumElem3(array)
 
 
 // Склеивание массивов, содержащихся в объектах массива:
-//var friends = [
-//	{ name: "Anna", books: ["Bible", "Harry Potter"], age: 21 },
-//	{ name: "Bob", books: ["War and peace", "Romeo and Juliet"], age: 26 },
-//	{ name: "Alice", books: ["The Lord of the Rings", "The Shining"], age: 18 }
-//	]
+let friends = [
+	{ name: "Anna", books: ["Bible", "Harry Potter"], age: 21 },
+	{ name: "Bob", books: ["War and peace", "Romeo and Juliet"], age: 26 },
+	{ name: "Alice", books: ["The Lord of the Rings", "The Shining"], age: 18 }
+	]
 
-//let allBooks = friends.reduce((acc, item) => {
-//	return[ ...acc, ...item.books]
-//}, []);
+let allBooks = friends.reduce((acc, item) => {
+	return[ ...acc, ...item.books]
+}, []);
 
-//console.log(allBooks);
+console.log(allBooks);
