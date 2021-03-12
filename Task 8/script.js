@@ -106,7 +106,7 @@ sumElem3(array)
 
 
 
-// Склеивание массивов, содержащихся в объектах массива:
+// ======================== Склеивание массивов, содержащихся в объектах массива:
 let friends = [
 	{ name: "Anna", books: ["Bible", "Harry Potter"], age: 21 },
 	{ name: "Bob", books: ["War and peace", "Romeo and Juliet"], age: 26 },
