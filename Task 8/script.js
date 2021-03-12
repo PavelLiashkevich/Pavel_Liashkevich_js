@@ -45,56 +45,56 @@ sumElemAfterZero(array);
 
 // ======================== 4) Найдите сумму последних N элементов до первого нуля с конца: 
 // ---- Option 1:
-//let reverse = array.reverse();
-//let zeroIndexRev = array.indexOf(0);
+let reverse = array.reverse();
+let zeroIndexRev = array.indexOf(0);
 
-//function sumElemRevUpZero(arr) {
-//	let sumElemRevUpZero = arr.reduce((acc, item, index) => {
-//		if (index < zeroIndexRev) {
-//			return acc + item;
-//		}
-//		return acc;
-//	}, 0);
-//	console.log(sumElemRevUpZero);	
-//}
+function sumElemRevUpZero(arr) {
+	let sumElemRevUpZero = arr.reduce((acc, item, index) => {
+		if (index < zeroIndexRev) {
+			return acc + item;
+		}
+		return acc;
+	}, 0);
+	console.log(sumElemRevUpZero);	
+}
 
-//sumElemRevUpZero(array);
+sumElemRevUpZero(array);
 
 // ---- Option 2:
 let sumElemAfter = array.splice(array.lastIndexOf(0)).reduce((acc, item) => acc + item, 0);
 console.log(sumElemAfter);
 
 // ---- Option 3:
-//let reverse2 = array.reverse();
-//let indexZero = array.findIndex((item) => item === 0);
-//let length = array.length
-//let indexLastZero = length - indexZero - 1;
-//let reverseBack = array.reverse();
+let reverse2 = array.reverse();
+let indexZero = array.findIndex((item) => item === 0);
+let length = array.length
+let indexLastZero = length - indexZero - 1;
+let reverseBack = array.reverse();
 
-//function sumElemFirstZero() {
-//	let sumElemFirstZero = array.reduceRight((acc, item, index) => {
-//		if(index > indexLastZero) {
-//			return acc + item;
-//		}
-//		return acc;
-//	}, 0)
-//	console.log(sumElemFirstZero);
-//}
+function sumElemFirstZero() {
+	let sumElemFirstZero = array.reduceRight((acc, item, index) => {
+		if(index > indexLastZero) {
+			return acc + item;
+		}
+		return acc;
+	}, 0)
+	console.log(sumElemFirstZero);
+}
 
-//sumElemFirstZero(array)
+sumElemFirstZero(array)
 
 // ---- Oprion 4:
-//function sumElem3(arr) {
-//	let a = arr.lastIndexOf(0);
-//	let sumsumsum = arr.reduce((acc, item, index) => {
-//		if (index > a) {
-//		return acc + item;
-//	}
-//	return acc;
-//	}, 0)
-//	console.log(sumsumsum);
-//}
-//sumElem3(array)
+function sumElem3(arr) {
+	let a = arr.lastIndexOf(0);
+	let sumsumsum = arr.reduce((acc, item, index) => {
+		if (index > a) {
+		return acc + item;
+	}
+	return acc;
+	}, 0)
+	console.log(sumsumsum);
+}
+sumElem3(array)
 
 
 // ======================== 5) Сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
@@ -105,21 +105,6 @@ console.log(sumElemAfter);
 
 
 // ======================== 6) Сколько элементов с конца массива надо сложить, чтобы в сумме получилось больше 10-ти.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
