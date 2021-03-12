@@ -319,9 +319,41 @@ let sumElemBeforeMin = array.reduce((acc, item, index) => {
 console.log(sumElemBeforeMin);
 
 
-// Преобразование в одномерный массив:
+// - Преобразование в одномерный массив:
 let data = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 let flat = data.reduce((acc, item) => {
 	return acc.concat(item);
 }, []);
 console.log(flat);
+
+
+// - Написать функцию, которая преобразует переменную student в переменную input используя reduce
+let student = [
+	{name: 'AAA', enrollment: 100},
+	{name: 'CCC', enrollment: 50},
+	{name: 'AAA', enrollment: 50},
+	{name: 'DDD', enrollment: 150},
+	{name: 'BBB', enrollment: 100},
+	{name: 'AAA', enrollment: 50},
+];
+
+let input = {
+	50: [{name: 'CCC', enrollment: 50},
+		 {name: 'AAA', enrollment: 50},
+		 {name: 'AAA', enrollment: 50}],
+	150: [{name: 'DDD', enrollment: 150}],
+	}
+
+function createMas(object) {
+	return object.reduce((acc, item,) => {
+		if (acc[item.enrollment]) {
+			acc[item.enrollment].push(item); // то мы добавляем в массив объект
+		}
+		else {
+			acc[item.enrollment] = [item]; // если нету такого свойства то создаем
+		}
+		return acc;
+	}, {})
+}
+
+console.log(createMas(student));
