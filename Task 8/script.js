@@ -65,7 +65,7 @@ console.log(sumElemAfter);
 // ---- Option 3:
 let reverse2 = array.reverse();
 let indexZero = array.findIndex((item) => item === 0);
-let length = array.length
+let length = array.length;
 let indexLastZero = length - indexZero - 1;
 let reverseBack = array.reverse();
 
@@ -96,15 +96,34 @@ sumElem3(array)
 
 
 // ======================== 5) Сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
+let counter = 0;
+let sumElemTen = array.reduce((acc, item) => {
+	if (counter > 10) {
+		return acc;
+	}
+	else {
+		counter += item;
+		return acc += 1;
+	}
+}, 0);
 
-
-
-
+console.log(sumElemTen);
 
 
 // ======================== 6) Сколько элементов с конца массива надо сложить, чтобы в сумме получилось больше 10-ти.
+let counterTask6 = 0;
+let sumElemTask6 = array.reduceRight((acc, item) => {
+	if (counterTask6 > 10) {
+		return acc;
+	}
+	else {
+		counterTask6 += item;
+		return acc += 1;
+	}
+}, 0);
 
-
+console.log(sumElemTask6);
+ 
 
 // ======================== Склеивание массивов, содержащихся в объектах массива:
 let friends = [
