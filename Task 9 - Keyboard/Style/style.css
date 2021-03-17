@@ -1,0 +1,23 @@
+.container {
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	width: 650px;
+}
+
+.keyboard_style {
+	display: flex;
+}
+
+.key {
+	height: 50px;
+	width: 50px;
+	border: 1px solid rgb(85, 78, 78);
+	margin: 3px;
+	padding: 3px;
+	display: flex;
+}
+
+.active {
+	background-color: blue;
+}
